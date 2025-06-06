@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Online de [Tu Nombre] - [Tu Profesión]">
+    <meta name="keywords" content="cv, portafolio, [tu profesion], [habilidad1], [habilidad2]">
+    <title>Facundo Dutto </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">[Facundo</span> Dutto]</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Inicio</a></li>
+                    <li><a href="cursos.html">Mis Cursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li> <!-- Enlace a sección en esta página -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <!-- Si tienes foto de perfil, ponla en la carpeta 'imagenes' -->
+          <!--  <img src="imagenes/foto-perfil.jpg" alt="Foto de [Tu Nombre]" class="profile-pic"> -->
+            <h1>Facundo Dutto</h1>
+            <p>Diseñador web. Ciberseguridad. Marketing</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="sobre-mi">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="content-box">
+                <p>
+                    Soy un profesional apasionado por la tecnología, enfocado en el desarrollo y diseño web, con un creciente interés y formación en el campo de la ciberseguridad. Mi objetivo es crear soluciones digitales que no solo sean visualmente atractivas y funcionales, sino también seguras y robustas.
+            <br><br> <!-- Esto añade un salto de línea para separar párrafos -->
+            Me encuentro en un proceso de aprendizaje continuo, buscando siempre nuevas tecnologías y metodologías para mejorar mis habilidades. Creo firmemente en la comunicación clara y constante como pilar para el éxito de cualquier proyecto, y me caracterizo por mi gran sentido de la responsabilidad y mi compromiso para entregar resultados de alta calidad.
+                </p>
+            </div>
+        </section>
+
+        <section id="servicios-destacados">
+            <h2 class="section-title">Servicios Destacados</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>Servicio Clave 1:</strong> Diseñador web. FullStack</li>
+                    <li><strong>Servicio Clave 2:</strong> Ciberseguridad</li>
+                    <li><strong>Servicio Clave 3:</strong> Marketing</li>
+                    <!-- Añade más si son pocos y clave -->
+                </ul>
+                <p style="text-align: center; margin-top: 20px;">
+                    <a href="cursos.html" style="color: #0779e4; font-weight: bold; text-decoration: none;">Ver todos mis cursos y certificaciones →</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- INICIO: Nueva sección de Proyectos -->
+        <!-- ============================================= -->
+        <section id="proyectos">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="proyectos-grid">
+
+                <!-- Proyecto 1: Página para tu amigo -->
+                <div class="proyecto-item">
+                    
+                    <h3>Proyecto página Web</h3>
+                    <p>
+                        Diseño y desarrollo de un sitio web con el propósito de ventas de relojes. Me encargué del diseño visual, la maquetación responsive con HTML y CSS, y la implementación de un formulario de contacto.
+                    </p>
+                    <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript.</p>
+                    <a href="https://apuswatches.pages.dev/" target="_blank" class="credencial-link">Ver Proyecto en Vivo →</a>
+                </div>
+
+         <section id="certificaciones-clave">
+            <h2 class="section-title">Certificaciones Clave</h2>
+            <div class="content-box">
+                <ul>
+                    <li><strong>Diplomatura en desarrollo web FrontEnd </strong> - Facultad Regional Resistencia</li>
+                    <li><strong>Ciberseguridad</strong> - Coursera (2024)</li>
+                    
+                </ul>
+                <p style="text-align:center; margin-top:15px;">
+                    <!-- CÓDIGO CORREGIDO -->
+<a href="cursos.html" class="credencial-link" style="display: inline-block;">Ver Listado Completo de Cursos</a>
+                </p>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2 class="section-title">Contacto</h2>
+            <div class="content-box" style="text-align: center;">
+                <p>¿Interesado en colaborar o tienes alguna pregunta?</p>
+                <p><strong>Email:</strong> <a href="facundo_1425@hotmail.com">facundo_1425@hotmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/facundo-dutto-7171022b6/" target="_blank">Facundo Dutto</a></p>
+                <!-- Añade más si quieres -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© <script>document.write(new Date().getFullYear())</script> [Facundo Dutto]. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal para imágenes (se usa en la página de cursos, pero lo incluimos aquí para que script.js pueda encontrarlo si es global) -->
+    <div id="myModal" class="modal">
+        <span class="close-modal" onclick="document.getElementById('myModal').style.display='none'">×</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

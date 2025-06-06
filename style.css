@@ -1,0 +1,298 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* --- Encabezado y Navegación Común --- */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+    text-align: center; /* Centrar contenido del header */
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    margin: 0; /* Asegúrate de que no haya margen en la lista */
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+    margin-top: 5px; /* Ajuste para alinear con la nav */
+}
+
+header #branding h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #0779e4;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ccc;
+    font-weight: bold;
+}
+
+/* Para centrar cuando la pantalla es pequeña (ej. móvil) */
+@media (max-width: 768px) {
+    header #branding,
+    header nav {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header nav ul {
+        margin-top: 10px;
+    }
+    header nav li {
+        display: block; /* O inline-block con padding para espaciar */
+        padding: 5px 0;
+    }
+    .container {
+        width: 95%;
+    }
+}
+
+
+/* --- Hero Section (para la página principal) --- */
+#showcase {
+    min-height: 300px;
+    background: #333 url('imagenes/showcase-bg.jpg') no-repeat 0 -400px; /* Cambia la imagen si quieres */
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    display: flex; /* Usar flexbox para centrar verticalmente */
+    flex-direction: column;
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+}
+
+#showcase .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #0779e4;
+    margin-bottom: 20px;
+}
+
+#showcase h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-top: 0; /* Ajuste para quitar espacio extra */
+}
+
+#showcase p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+
+/* --- Secciones Generales --- */
+section {
+    padding: 20px 0; /* Ajuste para menos padding superior/inferior */
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+section .container { /* Aplicar padding interno al container de la sección */
+    padding: 20px;
+}
+
+
+section h2.section-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    font-size: 1.8em;
+}
+
+/* --- Contenido Específico (Servicios, Sobre Mí) --- */
+.content-box {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.content-box h3 {
+    color: #0779e4;
+    margin-top: 0;
+}
+
+.content-box ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+.content-box li {
+    margin-bottom: 8px;
+}
+
+/* --- Estilos para la página de Cursos (cursos.html) --- */
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive */
+    gap: 25px;
+}
+
+.curso-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left; /* Alinear texto a la izquierda para mejor lectura */
+    display: flex;
+    flex-direction: column; /* Para que el enlace quede abajo si es necesario */
+}
+
+.curso-item img.certificado-preview {
+    max-width: 100%; /* Hacer la imagen responsiva dentro de su contenedor */
+    height: auto;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background: #fff;
+    cursor: pointer; /* Indicar que es clickeable */
+    align-self: center; /* Centrar imagen si es más pequeña que el ancho */
+    max-height: 200px; /* Limitar altura para consistencia, ajustar según necesidad */
+    object-fit: contain; /* Para que la imagen se ajuste sin distorsionarse */
+}
+
+.curso-item h3 {
+    font-size: 1.3em;
+    margin-top: 0; /* Quitar margen superior del h3 */
+    margin-bottom: 10px;
+    color: #0779e4;
+}
+
+.curso-item p {
+    font-size: 0.95em;
+    margin: 5px 0;
+    flex-grow: 1; /* Para que el texto ocupe espacio y empuje el enlace abajo */
+}
+
+.curso-item .credencial-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #0779e4;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    text-align: center; /* Centrar texto del botón */
+}
+
+.curso-item .credencial-link:hover {
+    background-color: #055cb0;
+}
+
+/* Categorías en la página de cursos */
+.categoria-cursos h3.categoria-titulo {
+    text-align: left;
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* --- Modal para ver imagen del certificado más grande --- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Quedarse en su sitio */
+    z-index: 1000; /* Estar por encima de todo */
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar scroll si la imagen es muy grande */
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9); /* Negro con opacidad */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; /* Máximo ancho de la imagen */
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --- Pie de Página Común --- */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #333;
+    text-align: center;
+    border-top: #0779e4 3px solid;
+}
+footer a {
+    color: #0779e4;
+    text-decoration: none;
+}
